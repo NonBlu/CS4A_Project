@@ -111,9 +111,8 @@ public class CS4A_Queens_Project {
                     //Increments solution count, decrements the row, and displays solution
                     if(row == BOARD_SIZE - 1) 
                     {
-                        chess[row++] = column;
+                        chess[row] = column; //places final queen
                         count++; //increments solution count
-                        row--; //decrements row back to 6
                         display(chess, count);
                     }
                     //If solution is not complete
