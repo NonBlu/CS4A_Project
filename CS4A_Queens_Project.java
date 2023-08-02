@@ -59,7 +59,7 @@ public class CS4A_Queens_Project {
 
         //row : int | row where queen is placed
         //column : int | column where queen is placed
-        //rowDiagonal : int | iterative
+        //rowDiagonal : int | iterative value to check if a diagonal queen will kill potential queen
         //oldQueen : int | used to track previously placed queens 
         int row, column, rowDiagonal, oldQueen;
         //counts number of solutions
@@ -100,7 +100,7 @@ public class CS4A_Queens_Project {
                      // and the queen is safe to place.
                      //If true, queen is not safe to place, increments column
 
-                     //Once queen position found Created by Spencer Glenn.
+                     //------Once queen position found Created by Spencer Glenn.------------
                      //if for loop was broken, continues while loop that goes to next column
                      //else continue
                     if(rowDiagonal <= row)
@@ -111,6 +111,7 @@ public class CS4A_Queens_Project {
                     //Increments solution count, decrements the row, and displays solution
                     if(row == BOARD_SIZE - 1) 
                     {
+                        chess[row++] = column;
                         count++; //increments solution count
                         row--; //decrements row back to 6
                         display(chess, count);
@@ -145,7 +146,8 @@ Displaying solution #1
 | | |Q| | | | | |
 | | | | | | |Q| |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
+
 
 Displaying solution #2
 |Q| | | | | | | |
@@ -155,7 +157,8 @@ Displaying solution #2
 | | | | | | |Q| |
 | | | |Q| | | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
+
 
 Displaying solution #3
 |Q| | | | | | | |
@@ -165,7 +168,7 @@ Displaying solution #3
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | | |Q| | | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #4
@@ -176,7 +179,7 @@ Displaying solution #4
 | |Q| | | | | | |
 | | | |Q| | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #5
@@ -187,7 +190,7 @@ Displaying solution #5
 | | |Q| | | | | |
 |Q| | | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #6
@@ -198,7 +201,7 @@ Displaying solution #6
 | | |Q| | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #7
@@ -209,7 +212,7 @@ Displaying solution #7
 |Q| | | | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #8
@@ -220,7 +223,7 @@ Displaying solution #8
 | | | |Q| | | | |
 | | | | | | | |Q|
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #9
@@ -231,7 +234,7 @@ Displaying solution #9
 |Q| | | | | | | |
 | | | |Q| | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #10
@@ -242,7 +245,7 @@ Displaying solution #10
 | | | | | | | |Q|
 | | | | |Q| | | |
 |Q| | | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #11
@@ -253,7 +256,7 @@ Displaying solution #11
 |Q| | | | | | | |
 | | | |Q| | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #12
@@ -264,7 +267,7 @@ Displaying solution #12
 | | |Q| | | | | |
 | | | | |Q| | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #13
@@ -275,7 +278,7 @@ Displaying solution #13
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #14
@@ -286,7 +289,7 @@ Displaying solution #14
 |Q| | | | | | | |
 | | | | | | |Q| |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #15
@@ -297,7 +300,7 @@ Displaying solution #15
 | | | | | |Q| | |
 | | | |Q| | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+|Q| | | | | | | |
 
 
 Displaying solution #16
@@ -308,7 +311,7 @@ Displaying solution #16
 | | | |Q| | | | |
 | |Q| | | | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #17
@@ -319,7 +322,7 @@ Displaying solution #17
 |Q| | | | | | | |
 | | | | | | |Q| |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #18
@@ -330,7 +333,7 @@ Displaying solution #18
 | | | | | | | |Q|
 |Q| | | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #19
@@ -341,7 +344,7 @@ Displaying solution #19
 |Q| | | | | | | |
 | | | |Q| | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #20
@@ -352,7 +355,7 @@ Displaying solution #20
 | | | | |Q| | | |
 |Q| | | | | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #21
@@ -363,7 +366,7 @@ Displaying solution #21
 | | | | | | | |Q|
 | | | | |Q| | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #22
@@ -374,7 +377,7 @@ Displaying solution #22
 | | | | | | | |Q|
 | | | | |Q| | | |
 | | | | | | |Q| |
-| | | | | | | | |
+|Q| | | | | | | |
 
 
 Displaying solution #23
@@ -385,7 +388,7 @@ Displaying solution #23
 | | | |Q| | | | |
 | | | | | | |Q| |
 | | | | |Q| | | |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #24
@@ -396,7 +399,7 @@ Displaying solution #24
 | | | | |Q| | | |
 | | | | | | |Q| |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #25
@@ -407,7 +410,7 @@ Displaying solution #25
 | | | |Q| | | | |
 |Q| | | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #26
@@ -418,7 +421,7 @@ Displaying solution #26
 | | | | |Q| | | |
 |Q| | | | | | | |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #27
@@ -429,7 +432,7 @@ Displaying solution #27
 | | | | | |Q| | |
 | | | |Q| | | | |
 |Q| | | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #28
@@ -440,7 +443,7 @@ Displaying solution #28
 |Q| | | | | | | |
 | | | | | |Q| | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #29
@@ -451,7 +454,7 @@ Displaying solution #29
 | |Q| | | | | | |
 | | | | | | |Q| |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #30
@@ -462,7 +465,7 @@ Displaying solution #30
 | | | | | |Q| | |
 | | |Q| | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #31
@@ -473,7 +476,7 @@ Displaying solution #31
 | | | | | |Q| | |
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #32
@@ -484,7 +487,7 @@ Displaying solution #32
 | | | | | |Q| | |
 | | | | | | | |Q|
 |Q| | | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #33
@@ -495,7 +498,7 @@ Displaying solution #33
 | | | | | |Q| | |
 | | | | | | | |Q|
 | | | | |Q| | | |
-| | | | | | | | |
+|Q| | | | | | | |
 
 
 Displaying solution #34
@@ -506,7 +509,7 @@ Displaying solution #34
 |Q| | | | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #35
@@ -517,7 +520,7 @@ Displaying solution #35
 | | | | | | |Q| |
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #36
@@ -528,7 +531,7 @@ Displaying solution #36
 |Q| | | | | | | |
 | | |Q| | | | | |
 | | | | |Q| | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #37
@@ -539,7 +542,7 @@ Displaying solution #37
 | |Q| | | | | | |
 | | | | | | | |Q|
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #38
@@ -550,7 +553,7 @@ Displaying solution #38
 | | | | | | |Q| |
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #39
@@ -561,7 +564,7 @@ Displaying solution #39
 |Q| | | | | | | |
 | | | | | | |Q| |
 | | | | |Q| | | |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #40
@@ -572,7 +575,7 @@ Displaying solution #40
 | | | | |Q| | | |
 | |Q| | | | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #41
@@ -583,7 +586,7 @@ Displaying solution #41
 | |Q| | | | | | |
 | | | | |Q| | | |
 |Q| | | | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #42
@@ -594,7 +597,7 @@ Displaying solution #42
 | | | | | |Q| | |
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | | | |Q|
 
 
 Displaying solution #43
@@ -605,7 +608,7 @@ Displaying solution #43
 |Q| | | | | | | |
 | | | | | |Q| | |
 | | | | | | | |Q|
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #44
@@ -616,7 +619,7 @@ Displaying solution #44
 | | | | | |Q| | |
 | |Q| | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #45
@@ -627,7 +630,7 @@ Displaying solution #45
 | | | | | | |Q| |
 | |Q| | | | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #46
@@ -638,7 +641,7 @@ Displaying solution #46
 |Q| | | | | | | |
 | | | | | | |Q| |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #47
@@ -649,7 +652,7 @@ Displaying solution #47
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #48
@@ -660,7 +663,7 @@ Displaying solution #48
 | |Q| | | | | | |
 | | | | | | |Q| |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #49
@@ -671,7 +674,7 @@ Displaying solution #49
 | | |Q| | | | | |
 | | | | | | |Q| |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #50
@@ -682,7 +685,7 @@ Displaying solution #50
 | | | | | | | |Q|
 | | |Q| | | | | |
 |Q| | | | | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #51
@@ -693,7 +696,7 @@ Displaying solution #51
 | | |Q| | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+|Q| | | | | | | |
 
 
 Displaying solution #52
@@ -704,7 +707,7 @@ Displaying solution #52
 | | | | | | |Q| |
 | | | |Q| | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #53
@@ -715,7 +718,7 @@ Displaying solution #53
 | | | |Q| | | | |
 | | | | | | |Q| |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #54
@@ -726,7 +729,7 @@ Displaying solution #54
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #55
@@ -737,7 +740,7 @@ Displaying solution #55
 | |Q| | | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #56
@@ -748,7 +751,7 @@ Displaying solution #56
 | | | | | | |Q| |
 |Q| | | | | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #57
@@ -759,7 +762,7 @@ Displaying solution #57
 | | | | | | | |Q|
 | | | | | |Q| | |
 | | | |Q| | | | |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #58
@@ -770,7 +773,7 @@ Displaying solution #58
 | |Q| | | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #59
@@ -781,7 +784,7 @@ Displaying solution #59
 | | | | | | | |Q|
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #60
@@ -792,7 +795,7 @@ Displaying solution #60
 | | |Q| | | | | |
 |Q| | | | | | | |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | | | |Q|
 
 
 Displaying solution #61
@@ -803,7 +806,7 @@ Displaying solution #61
 | | |Q| | | | | |
 |Q| | | | | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #62
@@ -814,7 +817,7 @@ Displaying solution #62
 | | |Q| | | | | |
 | | | | | | | |Q|
 | | | | | |Q| | |
-| | | | | | | | |
+| |Q| | | | | | |
 
 
 Displaying solution #63
@@ -825,7 +828,7 @@ Displaying solution #63
 | | |Q| | | | | |
 | | | | | |Q| | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #64
@@ -836,7 +839,7 @@ Displaying solution #64
 | | | | | | |Q| |
 | |Q| | | | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #65
@@ -847,7 +850,7 @@ Displaying solution #65
 | | | | | | | |Q|
 | | |Q| | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #66
@@ -858,7 +861,7 @@ Displaying solution #66
 | | |Q| | | | | |
 | | | | |Q| | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #67
@@ -869,7 +872,7 @@ Displaying solution #67
 | | | |Q| | | | |
 | | | | | | | |Q|
 | | | | |Q| | | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #68
@@ -880,7 +883,7 @@ Displaying solution #68
 | | | | |Q| | | |
 | | | | | | | |Q|
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #69
@@ -891,7 +894,7 @@ Displaying solution #69
 | | | |Q| | | | |
 | |Q| | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #70
@@ -902,7 +905,7 @@ Displaying solution #70
 | | | | |Q| | | |
 | |Q| | | | | | |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #71
@@ -913,7 +916,7 @@ Displaying solution #71
 |Q| | | | | | | |
 | | | |Q| | | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | | | |Q|
 
 
 Displaying solution #72
@@ -924,7 +927,7 @@ Displaying solution #72
 |Q| | | | | | | |
 | | | |Q| | | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | | |Q| |
 
 
 Displaying solution #73
@@ -935,7 +938,7 @@ Displaying solution #73
 | | | |Q| | | | |
 | | | | | | | |Q|
 |Q| | | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #74
@@ -946,7 +949,7 @@ Displaying solution #74
 | | | | | | | |Q|
 | | | | |Q| | | |
 |Q| | | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #75
@@ -957,7 +960,7 @@ Displaying solution #75
 |Q| | | | | | | |
 | | | | | | | |Q|
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #76
@@ -968,7 +971,7 @@ Displaying solution #76
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #77
@@ -979,7 +982,7 @@ Displaying solution #77
 | | | | |Q| | | |
 | | | | | | |Q| |
 |Q| | | | | | | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #78
@@ -990,7 +993,7 @@ Displaying solution #78
 | | |Q| | | | | |
 | | | | |Q| | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | | | | |Q|
 
 
 Displaying solution #79
@@ -1001,7 +1004,7 @@ Displaying solution #79
 | | | | | | | |Q|
 | |Q| | | | | | |
 | | | | |Q| | | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #80
@@ -1012,7 +1015,7 @@ Displaying solution #80
 |Q| | | | | | | |
 | | | | | | |Q| |
 | | | | |Q| | | |
-| | | | | | | | |
+| | |Q| | | | | |
 
 
 Displaying solution #81
@@ -1023,7 +1026,7 @@ Displaying solution #81
 | | | | | |Q| | |
 | | | |Q| | | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #82
@@ -1034,7 +1037,7 @@ Displaying solution #82
 | | | | | | | |Q|
 | | | | |Q| | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #83
@@ -1045,7 +1048,7 @@ Displaying solution #83
 |Q| | | | | | | |
 | | | |Q| | | | |
 | | | | | | | |Q|
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #84
@@ -1056,7 +1059,7 @@ Displaying solution #84
 | | | | | | | |Q|
 | | | | |Q| | | |
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #85
@@ -1067,7 +1070,7 @@ Displaying solution #85
 | | | | |Q| | | |
 |Q| | | | | | | |
 | | | | | |Q| | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #86
@@ -1078,7 +1081,7 @@ Displaying solution #86
 | | | | | | | |Q|
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #87
@@ -1089,7 +1092,7 @@ Displaying solution #87
 | | | | | |Q| | |
 |Q| | | | | | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Displaying solution #88
@@ -1100,7 +1103,7 @@ Displaying solution #88
 | | | | | |Q| | |
 | | | | | | | |Q|
 | |Q| | | | | | |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #89
@@ -1111,7 +1114,7 @@ Displaying solution #89
 | | | | | | |Q| |
 | | | | |Q| | | |
 | | |Q| | | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #90
@@ -1122,7 +1125,7 @@ Displaying solution #90
 |Q| | | | | | | |
 | | | | | | |Q| |
 | | | |Q| | | | |
-| | | | | | | | |
+| | | | | |Q| | |
 
 
 Displaying solution #91
@@ -1133,7 +1136,7 @@ Displaying solution #91
 | |Q| | | | | | |
 | | | | |Q| | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | |Q| | | | |
 
 
 Displaying solution #92
@@ -1144,9 +1147,9 @@ Displaying solution #92
 | | | | | |Q| | |
 | |Q| | | | | | |
 | | | | | | |Q| |
-| | | | | | | | |
+| | | | |Q| | | |
 
 
 Solutions = 92
-Time taken: 424 ms
+Time taken: 560 ms
  */
