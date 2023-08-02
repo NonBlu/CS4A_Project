@@ -17,7 +17,8 @@ public class CS4A_Queens_Project {
     static final int BOARD_SIZE = 8;
     
     //Display function that outputs a singular solution and solution number
-    public static void display(int[] chess, int counter) //Created by Aiden Sallows
+    //Created by Osman Gamez
+    public static void display(int[] chess, int counter) 
     {
         System.out.println("Displaying solution #" + counter);
          //for each index in array
@@ -41,6 +42,8 @@ public class CS4A_Queens_Project {
         System.out.print("\n\n");
     }
     public static void main(String[] arg) {
+        //initial code created by Sebestian Gamez
+
         //grabs current time when code begins running
         long startTime = Calendar.getInstance().getTimeInMillis();
         //singular array to hold row and column that queens are placed.
@@ -54,7 +57,12 @@ public class CS4A_Queens_Project {
             chess[i] = -1;
         }
 
+        //row : int | row where queen is placed
+        //column : int | column where queen is placed
+        //rowDiagonal : int | iterative
+        //oldQueen : int | used to track previously placed queens 
         int row, column, rowDiagonal, oldQueen;
+        //counts number of solutions
         int count = 0;
         //initializes row starting at 0, runs until row is less than 0
         for(row = 0; row >= 0;)
@@ -63,6 +71,8 @@ public class CS4A_Queens_Project {
             column = chess[row];
             //Infinite while loop that breaks with a break statement.
             //While a valid space is not found, this loop iterates
+
+            //Finding queen position Created by Aiden Sallows
             while (true)
             {
                 //checks to see if column will go out of bounds
@@ -84,10 +94,13 @@ public class CS4A_Queens_Project {
                             break; //FAILED SPACE FOUND | moves to if(rowDiagonal <= row)
                         }
                     }
+                    //conditional statements to continue solution finding created by: 
                      //if valid placement is not found.
                      //If this is false, that means for loop went through all checks,
                      // and the queen is safe to place.
                      //If true, queen is not safe to place, increments column
+
+                     //Once queen position found Created by Spencer Glenn.
                     if(rowDiagonal <= row)
                     {
                         continue;
