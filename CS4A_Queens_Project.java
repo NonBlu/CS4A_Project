@@ -101,6 +101,8 @@ public class CS4A_Queens_Project {
                      //If true, queen is not safe to place, increments column
 
                      //Once queen position found Created by Spencer Glenn.
+                     //if for loop was broken, continues while loop that goes to next column
+                     //else continue
                     if(rowDiagonal <= row)
                     {
                         continue;
